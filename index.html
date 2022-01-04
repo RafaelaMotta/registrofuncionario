@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/lupa.png" sizes="16x16" type="image/png">
+    <title>Sistema de Registro</title>    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+   <header class="menu-bg">
+    <div class="menu">
+      
+      <nav class="menu-nav">
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>      
+        <div class="titulo-principal">
+            <h1>Sistema de Registro de Funcionários</h1>
+        </div>        
+        <div class="container-01">            
+            <h2>Nome e Cargo do Funcionário<hr></h2>
+
+            <input type="text" id="text1" value="" placeholder="Nome">
+            <input type="text" id="text2" placeholder="Cargo">
+            <button type="button" onclick="inserirFuncionarios()">Adicionar</button>
+
+            <h2>Remover Funcionário<hr></h2>
+            <input type="text" id="removeNome" value="" placeholder="Nome">
+            <input type="text" id="removeCargo" placeholder="Cargo" value="">            
+            <button type="button"  class="corRed" id="botao" onclick="removeFuncionario()">Remover</button>
+            
+            <div class="bottom">
+            <table border="1">
+              <tr>
+                  <td>Nome</td>
+                  <td>Cargo</td>
+                  
+              </tr>              
+              <tr>
+                <td><ul id="funcionarios"></ul></td>
+                <td><ul id="cargofuncionario"></ul></td>                  
+              </tr>
+            </table>
+          </div>
+        </div>    
+
+            <div class="container-02">
+            <h2>Buscar Funcionário<hr></h2>            
+
+            <input type="text" id="buscarNome" value="" placeholder="Nome">
+            <input type="text" id="buscarCargo" placeholder="Cargo" value="">            
+            <button type="button"  id="alterar" onclick="obterFuncionarios()">Buscar</button>
+                       
+            <h2>Alterar Funcionário<hr></h2>            
+
+            <input type="text" id="alterarNome"  placeholder="Nome" value="">
+            <input type="text" id="alterarCargo" placeholder="Novo Cargo" value="">            
+            <button type="button"  id="modificar" onclick="modificarCargo()">Alterar</button>
+            <div class="bottom">
+            <table border="1">
+              <tr>
+                  <td>Nome</td>
+                  <td>Cargo</td>                  
+              </tr>
+              
+              <tr>            
+                <td><ul id="alterarfuncionario"></ul></td>
+                <td><ul id="resultadoaqui"></ul></td>           
+              </tr>
+            </table>            
+          </div>
+          </div>   
+    <script src="script/script.js"></script>
+    
+</body>
+</html>
